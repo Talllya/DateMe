@@ -1,4 +1,5 @@
 function handleYes() {
+    // new comment
     const header = document.querySelector("h1");
     //console.log(header);
     header.innerText = "Lezzz goo!";
