@@ -8,7 +8,7 @@ function handleYes() {
     yes.remove();
     no.remove();
     document.getElementById("img1").src =
-        "https://media1.tenor.com/m/nZuiRcnxoxsAAAAC/catusjksk.gif";
+        "catYes.gif";
 }
 
 function handleNo() {
@@ -26,7 +26,7 @@ function handleNoClick() {
     const newLeft = random();
     no.style.top = `${newTop}px`;
     no.style.left = `${newLeft}px`;
-    document.getElementById("img1").src = "https://media1.tenor.com/m/nZuiRcnxoxsAAAAC/catusjksk.gif";
+    document.getElementById("img1").src = "catNo.gif";
 }
 
 function random() {
