@@ -24,9 +24,9 @@ function handleNoClick() {
     const no = document.getElementById("no");
     const newTop = random();
     const newLeft = random();
+    document.getElementById("img1").src = "catNo.gif";
     no.style.top = `${newTop}px`;
     no.style.left = `${newLeft}px`;
-    document.getElementById("img1").src = "catNo.gif";
 }
 
 function random() {
