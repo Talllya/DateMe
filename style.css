@@ -1,13 +1,28 @@
-.container {
-    background-color: #fafafa;
+body {
+    background-color: #ffffff;
+    line-height: 85px;
 }
 
 #no {
     position: relative;
+    background-color: rgb(182, 156, 214);
+    font-size: 30px;
+}
+
+#yes {
+    position: relative;
+    background-color: rgb(182, 156, 214);
+    font-size: 30px;
+}
+
+#img1 {
+    position: relative;
+    max-width: 400px;
 }
 
 h1 {
-    font-size: 70px;
+    font-size: 60px;
+    color: #561634;
 }
 
 * {
