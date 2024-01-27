@@ -1,5 +1,8 @@
 body {
-    background-color: #ffffff;
+    width: 100%;
+    background-image: url("background.avif");
+    background-repeat: no-repeat;
+    background-size: cover;
     line-height: 85px;
 }
 
