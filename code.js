@@ -9,26 +9,40 @@ function handleYes() {
     no.remove();
     document.getElementById("img1").src =
         "catYes.gif";
+    const img = document.getElementById("img");
+    img.remove();
 }
 
 function handleNo() {
     //console.log("w");
     const no = document.getElementById("no");
-    const newTop = random();
-    const newLeft = random();
+    const newTop = random(300);
+    const newLeft = random(300);
     no.style.top = `${newTop}px`;
     no.style.left = `${newLeft}px`;
+
+    const img = document.getElementById("img");
+    img.src = "catNo.gif";
+
+    const nwTop = random(1100);
+    const nwLeft = random(1100);
+    img.style.top = `${nwTop}px`;
+    img.style.left = `${nwLeft}px`;
+      
 }
 
 function handleNoClick() {
     const no = document.getElementById("no");
-    const newTop = random();
-    const newLeft = random();
+    const newTop = random(300);
+    const newLeft = random(300);
     document.getElementById("img1").src = "catNo.gif";
     no.style.top = `${newTop}px`;
     no.style.left = `${newLeft}px`;
+
+    const img = document.getElementById("img");
+    img.remove();
 }
 
-function random() {
-    return Math.floor(Math.random() * 300);
+function random(size) {
+    return Math.floor(Math.random() * size);
 }
