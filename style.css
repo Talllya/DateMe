@@ -3,7 +3,7 @@ body {
     height: 100%;
     background-image: url("background.avif");
     background-repeat: no-repeat;
-    background-size: 125%;
+    background-size: cover;
     line-height: 85px;
 }
 
@@ -42,11 +42,11 @@ h1 {
     color: #561634;
 }
 
-#img {
+/*#img {
     position: absolute;
     height: auto;
     max-width: 20%;
-}
+}*/
 
 * {
     text-align: center;
