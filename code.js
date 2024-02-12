@@ -13,19 +13,36 @@ function handleYes() {
 
 function handleNo() {
     const no = document.getElementById("no");
-    const newTop = random(300);
+    const elem = document.querySelector("body");
+
+    const maxBodyPosition = elem.getBoundingClientRect().bottom;
+
+    const newBottom = random(300);
     const newLeft = random(300);
-    no.style.top = `${newTop}px`;
+
+    while(`${newBottom}px`> maxBodyPosition)
+    {
+        newBottom = random(100);
+        newLeft = random(100);
+    }
+    
+    no.style.bottom = `${newBottom}px`;
     no.style.left = `${newLeft}px`;
 
-    /*const img = document.getElementById("img");
+    const img = document.getElementById("img");
     img.src = "catNo.gif";
 
-    const nwTop = random(1100);
+    const nwBottom = random(1100);
     const nwLeft = random(1100);
-    img.style.top = `${nwTop}px`;
+
+    while(`${nwBottom}px`> maxBodyPosition)
+    {
+        nwBottom = random(400);
+        nwLeft = random(400);
+    }
+
+    img.style.Bottom = `${nwBottom}px`;
     img.style.left = `${nwLeft}px`;
-    */
 }
 
 function random(size) {

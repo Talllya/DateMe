@@ -42,11 +42,11 @@ h1 {
     color: #561634;
 }
 
-/*#img {
+#img {
     position: absolute;
     height: auto;
     max-width: 20%;
-}*/
+}
 
 * {
     text-align: center;
