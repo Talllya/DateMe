@@ -1,3 +1,14 @@
+let noButtonDefaultBottom = 0;
+let noButtonDefaultLeft = 0;
+
+function saveNoPosition() {
+    const no = document.getElementById("no");
+    const noButtonRect = no.getBoundingClientRect();
+    noButtonDefaultBottom = noButtonRect.bottom;
+    noButtonDefaultLeft = noButtonRect.left;
+    console.log(`first: left ${noButtonDefaultLeft} bottom ${noButtonDefaultBottom}`);
+}
+
 function handleYes() {
     const header = document.querySelector("h1");
     header.innerText = "Lezzz goo!";
@@ -13,18 +24,15 @@ function handleYes() {
 
 function handleNo() {
     const no = document.getElementById("no");
-    const elem = document.querySelector("body");
 
-    const maxBodyPosition = elem.getBoundingClientRect().bottom;
+    const noButtonRect = no.getBoundingClientRect();
+    const documentWidth = document.documentElement.clientWidth;
+    const documentHeight = document.documentElement.clientHeight;
 
-    const newBottom = random(300);
-    const newLeft = random(300);
+    const newBottom = noButtonDefaultBottom - random(documentHeight - noButtonRect.height) - noButtonRect.height;
+    const newLeft = noButtonDefaultLeft - random(documentWidth - noButtonRect.width) - noButtonRect.width;
 
-    while(`${newBottom}px`> maxBodyPosition)
-    {
-        newBottom = random(100);
-        newLeft = random(100);
-    }
+    console.log(`new: left ${newLeft} bottom ${newBottom}`);
     
     no.style.bottom = `${newBottom}px`;
     no.style.left = `${newLeft}px`;
@@ -35,13 +43,7 @@ function handleNo() {
     const nwBottom = random(1100);
     const nwLeft = random(1100);
 
-    while(`${nwBottom}px`> maxBodyPosition)
-    {
-        nwBottom = random(400);
-        nwLeft = random(400);
-    }
-
-    img.style.Bottom = `${nwBottom}px`;
+    img.style.bottom = `${nwBottom}px`;
     img.style.left = `${nwLeft}px`;
 }
 
